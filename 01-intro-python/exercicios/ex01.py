@@ -1,6 +1,5 @@
+numero = int(input ('digite um número inteiro'))
 
-numero = input ('digite um número inteiro')
-numero = int(numero)
 
 ant = 0
 sus = 0
@@ -8,11 +7,11 @@ sus = 0
 
 def antecessor_num(numero):
     ant = numero -1
-    print(ant)
+    print("Antecessor:{}".format(ant))
 
 def sucessor_num(numero):
     sus = numero +1
-    print(sus)
+    print("Sucessor:{}".format(sus))
 
 antecessor_num(numero)
 sucessor_num(numero)
