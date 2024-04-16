@@ -19,7 +19,9 @@ def jogo(palavra, numTentativas):
         letra = input("Digite uma letra: ").lower()
 
         if letra in advinhadas:
-            print("Você já acertou essa letra, escolha outra\n")
+            numTentativas -= 1
+            print("Você já escolheu essa letra, escolha outra\n")
+            print("Agora você tem {} tentativas\n".format(numTentativas))
         else:
             advinhadas.add(letra)
             if letra not in palavra:
@@ -28,6 +30,8 @@ def jogo(palavra, numTentativas):
                 print("Agora você tem {} tentativas\n".format(numTentativas))
             else:
                 print("Você acertou uma letra!\n")
+                numTentativas -= 1
+                print("Agora você tem {} tentativas\n".format(numTentativas))
 
         if mpalavraOculta(palavra, advinhadas).replace(" ", "") == palavra.replace(" ", ""):
             print("----Você acertou a palavra! Parabéns!----")
